@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
-    private float playerHealth = 10;
+    private float playerHealth = 20;
     public int Score = 0;
+    public TextMeshProUGUI scoreText;
+    public GameObject gameOverPanel;
 
     public float PlayerHealth
     {
@@ -22,6 +25,7 @@ public class PlayerController : MonoBehaviour
                 Destroy(gameObject);
                 Debug.Log("The Final Destination :(");
                 Time.timeScale = 0;
+                gameOverPanel.SetActive(true);
             }
         }
     }
@@ -60,7 +64,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(moveRangeX, transform.position.y, transform.position.z);
         }
-
+        scoreText.text = "Score : " + Score;
 
     }
    private IEnumerator ChangeMaterial()
