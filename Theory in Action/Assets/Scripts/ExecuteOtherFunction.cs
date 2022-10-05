@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//INHERITANCE
 public class ExecuteOtherFunction : Enemy
 {
     private GameObject player;
@@ -18,8 +19,10 @@ public class ExecuteOtherFunction : Enemy
 
     }
 
+    //POLYMORPHISM
     public override void DoSomething()
     {
+        
         playerRen.material = objectRen.material;
         base.DoSomething();
         playerController.PlayerHealth += 10;

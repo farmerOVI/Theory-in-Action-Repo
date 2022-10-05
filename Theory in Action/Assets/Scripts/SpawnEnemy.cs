@@ -18,6 +18,7 @@ public class SpawnEnemy : MonoBehaviour
         InvokeRepeating("SpawnCollectible", startDelay*3, spawnInterval*3);
     }
     
+    //ABSTRACTION
     public void SpawnEnemyPrefab()
     {
         int enemyIndex = 1;
@@ -31,6 +32,8 @@ public class SpawnEnemy : MonoBehaviour
         
        
     }
+
+    //ABSTRACTION
     public void SpawnCollectible()
     {
         int enemyIndex = 0;

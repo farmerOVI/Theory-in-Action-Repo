@@ -15,11 +15,12 @@ public class Enemy : MonoBehaviour
             DoSomething();
         } 
     }
-
+    // POLYMORPHISM
     public virtual void DoSomething()
     {
 
     }
+    // POLYMORPHISM
     public virtual void CountScore()
     {
 

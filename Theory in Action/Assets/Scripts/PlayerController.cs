@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public GameObject gameOverPanel;
 
+    //ENCAPSULATION
     public float PlayerHealth
     {
         get
